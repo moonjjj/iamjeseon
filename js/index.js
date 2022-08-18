@@ -22,7 +22,7 @@ $(function(){
     };
 
     function setProperty() {
-
+        // 퍼센트구하기
         isMobile = $(window).width() <= 1024 ? true : false;
         scrollHeight = scrollBody.height();
         sectionOffsetTop = scrollBody.offset().top;
@@ -32,7 +32,7 @@ $(function(){
 
         scrollPerecnt =  sectionScrolTop / scrollRealHeight;
         percent = scrollPerecnt * 100;
-
+        console.log(percent);
     };
 
     function contentIn() {
@@ -46,19 +46,19 @@ $(function(){
             $('.fix_motion .text_box .txt01').addClass('active');
         }
 
-        if(percent >= 43 && percent < 75) {
+        if(percent >= 43 && percent < 70) {
 
             imageChange(imgWidth * 1);
             $('.fix_motion .text_box .txt02').addClass('active');
         }
 
-        if(percent >= 75 && percent < 100) {
+        if(percent >= 70 && percent < 95) {
 
             imageChange(imgWidth * 2);
             $('.fix_motion .text_box .txt03').addClass('active');
         }
 
-        if(percent >= 100) {
+        if(percent >= 95) {
 
             imageChange(imgWidth * 3);
             $('.fix_motion .text_box .txt04').addClass('active');
