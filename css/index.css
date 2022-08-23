@@ -13,8 +13,8 @@
 .fix_motion .fix_wrap {position:relative;}
 .fix_motion .fix_wrap:after {clear:both; display:block; content:'';}
 .fix_motion .fix_wrap .tit {position:relative; z-index:50; margin-bottom:170px; font-size:150px; color:#333; text-align: center;}
-.fix_motion .fix_wrap .text_box {float:left; width:50%; padding-top:300px;}
-.fix_motion .fix_wrap .text_box p {max-width:100%; font-size:31px; font-family: 'NotoM'; color:#333; transition:color .5s;}
+.fix_motion .fix_wrap .text_box {float:left; width:45%; padding-right:5%; padding-top:300px;}
+.fix_motion .fix_wrap .text_box p {max-width:100%; font-size:43px; font-family: 'NotoM'; color:#333; transition:color .5s;}
 .fix_motion .fix_wrap .text_box p.active {color:#fff;}
 .fix_motion .fix_wrap .text_box p.txt02 {margin-top:300px;}
 .fix_motion .fix_wrap .text_box p.txt03 {margin-top:300px;}
@@ -27,6 +27,12 @@
 .fix_motion .fix_wrap .device_fix .watch_img .slide_wrap {overflow:hidden; position: absolute; left:97px; top:110px; z-index:10; width:350px; height:390px;}
 .fix_motion .fix_wrap .device_fix .watch_img .slide_wrap .slide {width: 1550px; height: 100%; transition:transform .5s;}
 .fix_motion .fix_wrap .device_fix .watch_img .slide_wrap .slide figure {float:left; width:370px;}
+figure .moon_img{width:250px; margin:-30px;}
+figure .je_img{width:150px; margin:-20px;}
+figure .seon_img{width:200px; margin-top:-50px; margin-left:70px;}
+.dot_introduce{
+    width:400px;
+}
 
 @media only screen and (max-width: 1024px) {
 .ggang_box h2 {font-size:32px;}
@@ -34,7 +40,7 @@
 .fix_motion {height: 3000px;} /* 모바일 버전에서 스크롤 거리를 설정함 */
 
 .fix_motion .fix_wrap .tit {font-size:54px; margin:auto;}
-.fix_motion .fix_wrap .text_box {float:none; position: sticky; left:0; top:0; z-index:50; width: 100%; padding-top:100px;}
+.fix_motion .fix_wrap .text_box {float:none; position: sticky; left:0; top:0; z-index:50; width: 100%; padding-top:100px; padding-right:0;}
 .fix_motion .fix_wrap .text_box p {position:absolute; left:0; top:100px; width: 100%; max-width:100%; padding:0 20px; font-size:18px; text-align: center; box-sizing: border-box; opacity: 0; transition:opacity .5s;}
 .fix_motion .fix_wrap .text_box p.active {opacity: 1;}
 .fix_motion .fix_wrap .text_box p.txt02 {margin-top:0px;}
@@ -46,4 +52,7 @@
 .fix_motion .fix_wrap .device_fix .watch_img .slide_wrap {top: 66px; width: 120px; height: 146px;}
 .fix_motion .fix_wrap .device_fix .watch_img .slide_wrap .slide {width: 480px;}
 .fix_motion .fix_wrap .device_fix .watch_img .slide_wrap .slide figure {width:120px;}
+figure .moon_img{width:120px; margin: auto;}
+figure .je_img{display: none;}
+figure .seon_img{display: none;}
 }
