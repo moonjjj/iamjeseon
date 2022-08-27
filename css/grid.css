@@ -1,65 +1,362 @@
-.grid_wrap{
+.grid_container{
+    background-color: #080808;
+}
+.grid1_wrap{
     display: grid;
-    grid-template-rows: repeat(4,1fr);
-    grid-template-columns: repeat(11,1fr);
-    background-color: #020202;
-    min-height:50vh;
-    min-width: 60vh;
-    padding:10vh 2vh;
+    height:1000px;
+    max-width:1100px;
+    margin:0 auto;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows:repeat(9,1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+    margin-bottom:10px;
 }
 .grid_item{
     background-color: #fff;
-    margin: 5px;
-    border-radius: 5px;
+    font-family: 'NotoM';
 }
-.grid_item.grid_career{
-    grid-column: 1/4;
-    grid-row:1/5;
-    /* background-color: #fff; */
+.grid_item.grid1_career{
+    grid-row-start: 1;
+    grid-row-end: 10;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    background:url('/img/bg_paper.jpeg') no-repeat;
+    background-size: cover;
 }
-.grid_item.grid_git{
-    grid-column:4/5;
-    grid-row:1/2;
+.grid_item.grid1_dev{
+    grid-row-start: 1;
+    grid-row-end: 8;
+    grid-column-start: 7;
+    grid-column-end: 11;
 }
-.grid_item.grid_link{
-    grid-column: 4/5;
-    grid-row:2/3;
+.grid_item.grid1_react_icon{
+    grid-row-start: 8;
+    grid-row-end: 10;
+    grid-column-start: 7;
+    grid-column-end: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.grid_item.grid_develop{
-    grid-column:5/9;
-    grid-row:1/3;
+
+.grid_item.grid1_js_icon{
+    grid-row-start: 8;
+    grid-row-end: 10;
+    grid-column-start: 9;
+    grid-column-end: 11;
 }
-.grid_item.grid_react{
-    grid-column: 9/12;
-    grid-row:1/3;
+
+.grid2_wrap{
+    display: grid;
+    height:360px;
+    max-width:1100px;
+    margin:0 auto;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows:repeat(2,1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+    margin-bottom:10px;
 }
-.grid_item.grid_mbti{
-    grid-column:4/6;
-    grid-row:3/5;
+.grid_item.grid2_git{
+    /* 위아래 */
+    grid-row-start: 1;
+    grid-row-end: 2;
+    /* 양옆 */
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
-.grid_item.grid_son{
-    grid-column:6/8;
-    grid-row:3/4;
+.grid_item.grid2_portfolio1{
+    /* 위아래 */
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* 양옆 */
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
-.grid_item.grid_dong{
-    grid-column:6/8;
-    grid-row:4/5;
+.grid_item.grid2_portfolio1-1{
+    /* 위아래 */
+    grid-row-start: 1;
+    grid-row-end: 3;
+    /* 양옆 */
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
-.grid_item.grid_e_mail{
-    grid-column:8/12;
-    grid-row:4/5;
+.grid_item.grid2_portfolio2{
+    /* 위아래 */
+    grid-row-start: 1;
+    grid-row-end: 3;
+    /* 양옆 */
+    grid-column-start: 3;
+    grid-column-end: 5;
 }
-/* .grid_item.grid_mbti{
-    grid-column:;
-    grid-row:;
-} */
+.grid_item.grid2_portfolio3{
+    /* 위아래 */
+    grid-row-start: 1;
+    grid-row-end: 3;
+    /* 양옆 */
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+
+
+.grid3_wrap{
+    display: grid;
+    height:400px;
+    max-width:1100px;
+    margin:0 auto;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows:repeat(2,1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+}
+.grid_item.grid3_son{
+    /* 위아래 */
+    grid-row-start: 1;
+    grid-row-end: 2;
+    /* 양옆 */
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.grid_item.grid3_apple{
+    /* 위아래 */
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* 양옆 */
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.grid_item.grid3_new_thing1{
+    /* 위아래 */
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* 양옆 */
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.grid_item.grid3_mbti{
+    /* 위아래 */
+    grid-row-start: 1;
+    grid-row-end: 3;
+    /* 양옆 */
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+.grid_item.grid3_new_thing2{
+    /* 위아래 */
+    grid-row-start: 1;
+    grid-row-end: 2;
+    /* 양옆 */
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+.grid_item.grid3_coding{
+    /* 위아래 */
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* 양옆 */
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+.grid_item.grid3_son{
+    /* 위아래 */
+    grid-row-start: 1;
+    grid-row-end: 2;
+    /* 양옆 */
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.grid_item.grid3_son{
+    /* 위아래 */
+    grid-row-start: 1;
+    grid-row-end: 2;
+    /* 양옆 */
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
 
 
 
+
+/* 커리어 */
+.career_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+    margin-top:30px;
+}
+.career_title{
+    font-size:3rem;
+    letter-spacing: -6px;
+}
+.career_header{
+    display: flex;
+    align-items: center;
+}
+.career_intro{
+    display:flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.career_intro span:first-child{
+    letter-spacing: -2px;
+    font-size:1.4rem;
+}
+.career_intro span:nth-child(2){
+    font-size:2rem;
+}
+.career_intro span:nth-child(3){
+    font-size:.3rem;
+}
+.career_img{
+    width:200px;
+}
+.career_contents{
+    margin-top:-7px;
+    width:90%;
+    background:#fafafa;
+    border:1px solid #d2d2d2;
+    border-radius: 40px 0 40px 40px;
+}
+.career_contents_inner{
+    display: flex;
+    flex-direction: column;
+    margin:30px;
+}
+.career_contents_inner .contents_title{
+    font-size:1.3rem;
+}
+
+/* react & js icon */
+.grid_item.grid1_react_icon img{
+    width:70%;
+}
+.grid_item.grid1_js_icon{
+    font-size:10rem;
+    color:rgb(248, 248, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:900;
+}
+/* son & apple & new things & mbti */
+.grid_item.grid3_son .static_son{
+    position:absolute;
+    width: 360px;
+}
+.grid_item.grid3_son .static_son:hover{
+    opacity: 0;
+}
+.grid_item.grid3_son{
+    background-color: transparent;
+}
+.grid_item.grid3_mbti{
+   background-color: transparent; 
+   position: relative;
+   cursor: pointer;
+}
+.grid_item.grid3_mbti .link_img{
+    position:absolute;    
+    right:5px;
+    top:5px;
+    width:25px;
+}
+.grid_item.grid3_apple{
+    background-color: transparent;
+}
+.grid_item.grid_item.grid3_new_thing1{
+    background-color: transparent;
+}
+.grid_item.grid_item.grid3_new_thing2{
+    background-color: transparent;
+}
+.grid_item.grid_item.grid3_new_thing2 img{
+    width: 100%;
+    height: 40%;
+}
+.grid_item.grid_item.grid3_coding{
+    background-color: transparent;
+}
+
+
+/* toggle */
+.grid_item.grid3_new_thing2{
+    position:relative;
+    background-color: transparent;
+}
+*, *:after, *:before {
+    box-sizing: border-box;
+    font-family: serif;
+  }
+  
+  .toggle {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    /* transform: translate(-50%, -50%); */
+  }
+  .toggle:after, .toggle:before {
+    content: ':';
+    font-size: 10rem;
+    position: absolute;
+    left: 30px;
+    top: -10px;
+    z-index: 2;
+    color: #3CB300;
+  }
+  .toggle:before {
+    left: auto;
+    right: 30px;
+    color: #B7B7B7;
+  }
+  .toggle label {
+    height: 200px;
+    width: 360px;
+    background: #f5f2f0;
+    border-radius: 30px;
+    position: relative;
+    display: inline-block;
+    content: ':';
+  }
+  .toggle label:before {
+    content: ')';
+    color: #3CB300;
+    font-size: 10rem;
+    position: absolute;
+    left:80px;
+    top: -20px;
+    transition: 0.3s ease-in;
+    z-index: 2;
+  }
+  .toggle label:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 200px;
+    width: 360px;
+    border-radius: 30px;
+    box-shadow: 33px 18px 26px -13px rgba(0, 0, 0, 0.17);
+    transition: transform .3s ease-in;
+  }
+  .toggle input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .toggle input:checked + label:before {
+    transform: translateX(130px);
+    color: #B7B7B7;
+  }
+  .toggle input:checked + label:after {
+    box-shadow: -33px 18px 26px -13px rgba(0, 0, 0, 0.17);
+  }
 @media only screen and (max-width: 1024px) {
-    .grid_item.grid_career{
-        grid-column: 1/4;
-        grid-row:1/5;
-        /* background-color: #fff; */
-    }
+
 }
