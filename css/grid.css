@@ -4,8 +4,7 @@
 .grid1_wrap{
     display: grid;
     height:1000px;
-    max-width:1100px;
-    margin:0 auto;
+    margin:0 10px;
     grid-template-columns: repeat(10,1fr);
     grid-template-rows:repeat(9,1fr);
     row-gap: 10px;
@@ -46,12 +45,14 @@
     grid-column-start: 9;
     grid-column-end: 11;
 }
+.grid_item.grid1_js_icon img{
+    width:fit-content
+}
+
 
 .grid2_wrap{
     display: grid;
-    height:360px;
-    max-width:1100px;
-    margin:0 auto;
+    margin:0 10px;
     grid-template-columns: repeat(6,1fr);
     grid-template-rows:repeat(2,1fr);
     row-gap: 10px;
@@ -65,6 +66,7 @@
     /* 양옆 */
     grid-column-start: 1;
     grid-column-end: 2;
+    border-radius: 100px;
 }
 .grid_item.grid2_portfolio1{
     /* 위아래 */
@@ -103,8 +105,8 @@
 .grid3_wrap{
     display: grid;
     height:400px;
-    max-width:1100px;
-    margin:0 auto;
+    /* max-width:1100px; */
+    margin:0 10px;
     grid-template-columns: repeat(6,1fr);
     grid-template-rows:repeat(2,1fr);
     row-gap: 10px;
@@ -212,20 +214,87 @@
 .career_img{
     width:200px;
 }
+.career_line:before{
+    position: absolute;
+    top: 15px;
+    bottom: 0;
+    left: 35px;
+    content: '';
+    width: 1px;
+    background-color: #e4e8eb;
+}
 .career_contents{
     margin-top:-7px;
     width:90%;
     background:#fafafa;
     border:1px solid #d2d2d2;
     border-radius: 40px 0 40px 40px;
+    position:relative;
 }
+.career_contents_inner:before{
+    position: absolute;
+    left: 30px;
+    background-color: #d2d2d2;
+    display: inline-block;
+    width: 11px;
+    height: 10px;
+    margin-top:15px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    vertical-align: top;
+    content: '';
+}
+.side_circle:before{
+    position: absolute;
+    left: 30px;
+    background-color: #97ff05;
+    display: inline-block;
+    width: 13px;
+    height: 12px;
+    margin-top:15px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    vertical-align: top;
+    content: '';
+}
+
 .career_contents_inner{
     display: flex;
     flex-direction: column;
-    margin:30px;
+    margin:30px 70px;
+    transition:1s linear;
 }
 .career_contents_inner .contents_title{
     font-size:1.3rem;
+}
+.career_contents_inner .contents_due{
+    font-size:1rem;
+    color:#d2d2d2;
+}
+.career_contents_inner .contents_stack{
+    font-size:1rem;
+}
+.contents_stack_name{
+  display: flex;  
+  gap:10px;
+}
+.contents_stack_name img{
+    width:30px;
+}
+.contents_stack_name .vibe{
+    animation-duration: .2s;
+  animation-name: vibe;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes vibe {
+    0%{
+        transform:rotate(-15deg);
+    }33%{
+        transform: rotate(5deg);
+    } 66%{
+        transform: rotate(15deg);
+    }
 }
 
 /* react & js icon */
@@ -243,7 +312,7 @@
 /* son & apple & new things & mbti */
 .grid_item.grid3_son .static_son{
     position:absolute;
-    width: 360px;
+    width: 33vw;
 }
 .grid_item.grid3_son .static_son:hover{
     opacity: 0;
@@ -300,19 +369,19 @@
     content: ':';
     font-size: 10rem;
     position: absolute;
-    left: 30px;
+    left: 20px;
     top: -10px;
     z-index: 2;
     color: #3CB300;
   }
   .toggle:before {
     left: auto;
-    right: 30px;
+    right: 20px;
     color: #B7B7B7;
   }
   .toggle label {
     height: 200px;
-    width: 360px;
+    width: 32.5vw;
     background: #f5f2f0;
     border-radius: 30px;
     position: relative;
@@ -335,7 +404,7 @@
     left: 0;
     top: 0;
     height: 200px;
-    width: 360px;
+    width: 32.5vw;
     border-radius: 30px;
     box-shadow: 33px 18px 26px -13px rgba(0, 0, 0, 0.17);
     transition: transform .3s ease-in;
@@ -351,7 +420,7 @@
     cursor: pointer;
   }
   .toggle input:checked + label:before {
-    transform: translateX(130px);
+    transform: translateX(calc(100% + 20vw));
     color: #B7B7B7;
   }
   .toggle input:checked + label:after {

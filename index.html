@@ -101,30 +101,43 @@
 					</div>
 
 					<div class="career_contents">
+						<div class="career_line"></div>
 
-						<div class="career_contents_inner">
+						<div class="career_contents_inner inner0">
 							<div class="contents_title">인천일보아카데미(Web Back-End)</div>
 							<div class="contents_due">2020.04 ~ 2020.09</div>
 							<div class="contents_stack">
-								<div class="contents_stack_name">javascript, java, mysql</div>
+								<div class="contents_stack_title">사용스택</div>
+								<div class="contents_stack_name">
+									<img src="/img/javascript.png" alt="">
+									<img src="/img/java.png" alt="">
+									<img src="/img/mysql.png" alt="">
+								</div>
 							</div>
 						</div>
 
-						<div class="career_contents_inner">
+						<div class="career_contents_inner inner1">
 							<div class="contents_title">나눔모바일(Web Front-End)</div>
 							<div class="contents_due">2020.12 ~ 2021.06</div>
 							<div class="contents_stack">
 								<div class="contents_stack_title">사용스택</div>
-								<div class="contents_stack_name">javascript, jsp</div>
+								<div class="contents_stack_name">
+									<img src="/img/javascript.png" alt="">
+									<img src="/img/nodejs.png" alt="">
+								</div>
 							</div>
 						</div>
-
-						<div class="career_contents_inner">
+						
+						<div class="career_contents_inner inner2">
 							<div class="contents_title">공새로(Web Front-End)</div>
 							<div class="contents_due">2021.10 ~ Now</div>
 							<div class="contents_stack">
 								<div class="contents_stack_title">사용스택</div>
-								<div class="contents_stack_name">javascript, react, react-native</div>
+								<div class="contents_stack_name">
+									<img src="/img/javascript.png" alt="">
+									<img src="/img/nodejs.png" alt="">
+									<img src="/img/react.png" alt="">
+								</div>
 							</div>
 						</div>
 
@@ -140,16 +153,16 @@
 				내 개발스택을 어떻게 보여줄지 고민~
 			</div>
 			<div class="grid_item grid1_react_icon">
-				<img src="/img/react_icon.png"/>
+				<img src="/img/react_white.png"/>
 			</div>
 			<div class="grid_item grid1_js_icon">
-				JS
+				<img src="/img/javascript_black.png" alt="">
 			</div>
 		</div>
 
 		<div class="grid2_wrap">
 			<div class="grid_item grid2_git">
-				<img src="/img/git.png" alt="">
+				<img src="/img/github_white.gif" alt="">
 			</div>
 			<div class="grid_item grid2_portfolio1">
 				homix homix
@@ -201,7 +214,17 @@
 
     <script src="js/index.js"></script>
     <script src="js/percent.js"></script>
-
+	<script>
+        let contents = $('.career_contents_inner');
+		
+		contents.hover(function(){
+			$(`.inner${contents.index(this)} img`).addClass('vibe');
+			$(`.inner${contents.index(this)}`).addClass('side_circle');
+		},function(){
+			$(`.inner${contents.index(this)} img`).removeClass('vibe');
+			$(`.inner${contents.index(this)}`).removeClass('side_circle');
+		});
+	</script>
 
 </body>
 </html>
